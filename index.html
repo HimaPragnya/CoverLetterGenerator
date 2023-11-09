@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}
+    Cover Letter Generator
+{% endblock title %}
+{% block content %}
+    <form action="{{ url_for("home") }}" method="post">
+        <div class="antialiased text-gray-900 px-6">
+            <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
+                <div class="py-12">
+                    <h2 class="text-2xl font-bold">Cover Letter Generator</h2>
+                    <p class="mt-2 text-lg text-gray-600">Insert related info into the fields.</p>
+                    <div class="mt-8 max-w-md">
+                        <div class="grid grid-cols-1 gap-6">
+                            <label class="block">
+                                <span class="text-gray-700">Job</span>
+                                <input type="text"
+                                       id='job'
+                                       name='job'
+                                       class="mt-1 block w-full"
+                                       placeholder="e.g: SWE, Business Analyst, Manager" />
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">Company</span>
+                                <input type="text"
+                                       id='company'
+                                       name='company'
+                                       class="mt-1 block w-full"
+                                       placeholder="e.g: Google, Microsoft, Meta" />
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">Occupation</span>
+                                <select name="occupation" class="mt-1 block w-full" placeholder="Select Occupation">
+                                    <option value=""></option>
+                                    <option value="student">Student</option>
+                                    <option value="working_professional">Working Professional</option>
+                                    <option value="not_working">Not Working</option>
+                                </select>
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">City</span>
+                                <input type="text"
+                                       id='city'
+                                       name='city'
+                                       class="mt-1 block w-full"
+                                       placeholder="Enter City" />
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">State</span>
+                                <input type="text"
+                                       id='state'
+                                       name='state'
+                                       class="mt-1 block w-full"
+                                       placeholder="Enter State" />
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">Current study</span>
+                                <select name="currentstudy" class="mt-1 block w-full" placeholder="Select Current study">
+                                    <option value=""></option>
+                                    <option value="undergraduate">Undergraduate</option>
+                                    <option value="graduate">Graduate</option>
+                                    <option value="phd">Phd</option>
+                                    <option value="na">N/A</option>
+                                </select>
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">Course of Study</span>
+                                <input type="text"
+                                       id='courseofstudy'
+                                       name='courseofstudy'
+                                       class="mt-1 block w-full"
+                                       placeholder="Enter Course of study" />
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">University</span>
+                                <input type="text"
+                                       id='university'
+                                       name='university'
+                                       class="mt-1 block w-full"
+                                       placeholder="Enter University" />
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">Years of Experience</span>
+                                <select name="yearsofexperience" class="mt-1 block w-full" placeholder="Select years of Experience">
+                                    <option value=""></option>
+                                    <option value="lessthan1">less than 1</option>
+                                    <option value="1-2">1-2</option>
+                                    <option value="2-3">2-3</option>
+                                    <option value="morethan3">More than 3</option>
+                                </select>
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">Skillset</span>
+                                <input type="text"
+                                       id='skillset'
+                                       name='skillset'
+                                       class="mt-1 block w-full"
+                                       placeholder="provide your skillset" />
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">Experience</span>
+                                <input type="text"
+                                       id='experience'
+                                       name='experience'
+                                       class="mt-1 block w-full"
+                                       placeholder="mention your experience" />
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">About your Interests</span>
+                                <input type="text"
+                                       id='interests'
+                                       name='interests'
+                                       class="mt-1 block w-full"
+                                       placeholder="Add your interests" />
+                            </label>
+                            <label class="block">
+                                <span class="text-gray-700">Signature</span>
+                                <input type="text"
+                                       id='signature'
+                                       name='signature'
+                                       class="mt-1 block w-full"
+                                       placeholder="Enter your Full Name" />
+                            </label>
+                           
+                            <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                                    type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock content %}

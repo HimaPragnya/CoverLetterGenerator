@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+    Generated Cover Letter
+{% endblock title %}
+{% block content %}
+    <div class="antialiased text-gray-900 px-6">
+        <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
+            <h1>Generated Cover Letter</h1>
+            <pre>{{ text }}</pre>
+        </div>
+        <button onclick="window.location.href='{{ url_for("home") }}'" class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2" ">Back
+        </button>
+    </div>
+{% endblock content %}
